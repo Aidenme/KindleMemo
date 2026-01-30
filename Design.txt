@@ -1,0 +1,38 @@
+FEATURES
+1.0
+-Extract the text of the highlights from the HTML file written by kindle.
+-Write extracted highlight text to an HTML file. Make sure the text of each highlight has <BR> splitting it off from other highlights.
+
+Extractor Class
+Uses beautiful soup to get the 'noteText' div content
+extractor.getAllHighlights
+	return a list of highlights
+extractor.getFileName
+	returns the name of the file
+
+HighlightBook Class
+An actual highlight file.
+	highlights = a list of highlights
+	filename = filename
+	title = book title
+	author = book author
+	highlightCount = number of highlights
+
+Saver Class
+Saves a book of highlights
+
+
+FOLDER STRUCTURE
+
+Input folder where I put highlights I have downloaded from the Kindle app.
+	-This is where I should save the files when I am saving from the Kindle app.
+	-Don't change the name of the highlights you download out of the Kindle app.
+	-Files in here are deleted after KindleMemo runs.
+	-When saving files from the Kindle app in here, remember they should overwrite the same book if it 		happens to still be in here.
+
+Highlight Books
+	-Folder where the the entire collection of highlights extracted are stored. Each book has it's own HTML 		file.
+
+New Highlights
+	-Highlights that aren't found in the extracted highlight get added here. This way I can just grab these 		files to import into SuperMemo instead of getting confused about which highlights I have 		already added or not.
+
