@@ -3,11 +3,24 @@ FEATURES
 -Extract the text of the highlights from the HTML file written by kindle.
 -Write extracted highlight text to an HTML file. Make sure the text of each highlight has <BR> splitting it off from other highlights.
 
+FileManager Class
+	inputFiles
+	highlightBookFiles
+
+fileCheck(inputFile)
+	determines if a book in the input matches with a highlight book that already exists.
+
+getBookFromKindleFile(file)
+	return a HighlightBook
+
+updateBook(oldfile, newfil)
+	updates the file sent
+
 Extractor Class
 Uses beautiful soup to get the 'noteText' div content
-extractor.getAllHighlights
+getAllHighlights()
 	return a list of highlights
-extractor.getFileName
+getFileName()
 	returns the name of the file
 
 HighlightBook Class
@@ -17,6 +30,8 @@ An actual highlight file.
 	title = book title
 	author = book author
 	highlightCount = number of highlights
+	getHighlightsFromFile
+	
 
 Saver Class
 Saves a book of highlights
