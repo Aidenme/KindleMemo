@@ -1,3 +1,22 @@
+PROBLEM DECOMP
+
+Convert books from Kindle format to the right format for my operations.
+	Get a list of highlights with beautiful soup
+	Write a new html file using my formatting
+
+Get highlights out of all the books that are in the input folder.
+	Get a list of highlights.
+Write brand new HTML files of highlights from books that have not yet been extracted.
+	Write from a list of highlights
+Write new HTML files that only include new highlights and not highlights that have already been extracted.
+	Get a list of all highlights from local file
+	Get a list of all highlights from Kindle file
+	Remove highlights in the Kindle file list that are also in the local file list
+	Write from a list of highlights
+Update "Master" highlight files with the new extracted highlights.
+	Delete the old file and replace it with a new file.
+Delete the files that have had the highlights extracted.
+
 FEATURES
 1.0
 -Extract the text of the highlights from the HTML file written by kindle.
