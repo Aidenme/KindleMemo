@@ -1,5 +1,27 @@
 PROBLEM DECOMP
 
+Create book objects out of each book in input folder
+	When initializing you can indicate the format and the book can gather all of it's own data using beautiful soup
+	String - Title: <book title>
+	String - Author: <book author>
+	String - Filename: <book filename>
+	List - Highlights: an array of highlights
+	String - Status: "New", "Update", "Stored"
+
+Get book objects out of storage
+	For each Book inside input see if the book is in storage. If it is, set it's status to Update. If not set status 	to New.
+
+Find New Highlights
+	Input: two books, a stored book and a new book. 
+	Returns: A list of highlights that are in the new book, but not in the stored book.
+
+Printer object
+	Prints a list of highlights to an html file
+	Input: a list of highlights, a filename
+
+Save books
+	Save books to the Storage folder
+
 Convert books from Kindle format to the right format for my operations.
 	Get a list of highlights with beautiful soup
 	Write a new html file using my formatting
