@@ -1,12 +1,27 @@
 PROBLEM DECOMP
 
+findNewHighlights(old book, new book)
+
 Create book objects out of each book in input folder
 	When initializing you can indicate the format and the book can gather all of it's own data using beautiful soup
 	String - Title: <book title>
 	String - Author: <book author>
 	String - Filename: <book filename>
-	List - Highlights: an array of highlights
-	String - Status: "New", "Update", "Stored"
+	List - Highlights: an array of highlights, just text
+	compareBook(book)
+		Sees how a book compares to the current book.
+		If it is not the same book, say something and stop
+		If it is the same book see if the highlights are the same.
+		setHighlightType(compared book highlights)
+	setHighlightType(highlightList)
+		Compare this objects highlight list. Highlights that match are set to "old" instead of "new".
+	printNewHighlights(location)
+		Print a highlight list, probably with a label
+		get a list of only the new highlights
+		Printer.printList(newHighlightList, filename)
+	printBook(location)
+		export book to a folder. Should overwrite book with the same filename.
+		
 
 Get book objects out of storage
 	For each Book inside input see if the book is in storage. If it is, set it's status to Update. If not set status 	to New.
@@ -16,8 +31,10 @@ Find New Highlights
 	Returns: A list of highlights that are in the new book, but not in the stored book.
 
 Printer object
-	Prints a list of highlights to an html file
-	Input: a list of highlights, a filename
+	printNew(a list of highlights, a filename, a location(optional, set in printer by default), header(optional)
+		Prints a list of highlights to an html file
+	printBook(a book, a location(optional, set by printer by default), options(optional)
+		Prints an entire book.
 
 Save books
 	Save books to the Storage folder
