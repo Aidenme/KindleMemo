@@ -1,20 +1,43 @@
-PROBLEM DECOMP
+STORED_BOOKS = getStoredBooks()
+NEW_BOOKS = getNewBooks()
 
-findNewHighlights(old book, new book)
+getNewBooks()
+	Creates book objects from the input folder and returns a list of them.
+
+getStoredBooks()
+	Create book objects from the stored book folder and return a list of them.
+
+compareBooks(storedBooks, newBooks) {
+	newHighlights = []
+	for all the newbooks check match for all the stored books
+		checkMatch
+			if false
+				storeBook()
+				exportHighlights()
+			if true
+				newHighlights = getNewHighlights(oldbook, newBook)
+				exportHighlights()
+				updateBook(newHighlights)
+				deleteBook(newBook, input)
+
+deleteBook(name, folder)
+
+getNewHighlights(oldBook, newBook)
+
+checkMatch(book1, book2) {
+	return true or false
+
+updateBook(highlightList)
+
+exportHighlights()
 
 Create book objects out of each book in input folder
-	When initializing you can indicate the format and the book can gather all of it's own data using beautiful soup
+
+Book objects:
 	String - Title: <book title>
 	String - Author: <book author>
 	String - Filename: <book filename>
 	List - Highlights: an array of highlights, just text
-	compareBook(book)
-		Sees how a book compares to the current book.
-		If it is not the same book, say something and stop
-		If it is the same book see if the highlights are the same.
-		setHighlightType(compared book highlights)
-	setHighlightType(highlightList)
-		Compare this objects highlight list. Highlights that match are set to "old" instead of "new".
 	printNewHighlights(location)
 		Print a highlight list, probably with a label
 		get a list of only the new highlights
