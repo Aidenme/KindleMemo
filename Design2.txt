@@ -1,0 +1,10 @@
+I'm starting the design from scratch again. OOP in Ruby says don't over design at the beginning so I'm going to just do a simple one now. Remember classes should do the smallest possible useful thing.
+
+"Takes book notes created by Kindle and exports any new highlights into html files that can be easily imported into SuperMemo"
+
+NoteReader
+	Gets highlights out of a kindle note file
+
+NoteWriter
+	Writes a list of highlights to an html file
+
