@@ -1,2 +1,2 @@
-def getNewBooks():
+print("Hello, World!")
     
