@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-class NoteReader:
+class HTMLReader:
     DEFAULT_IMPORT = 'Input/'
     def __init__(self, fileName, importFolder=DEFAULT_IMPORT):
         self.fileName = fileName
