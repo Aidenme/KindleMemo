@@ -1,10 +1,13 @@
 from bs4 import BeautifulSoup
-class HTMLReader:
-    DEFAULT_IMPORT = 'Input/'
-    def __init__(self, fileName, importFolder=DEFAULT_IMPORT):
-        self.fileName = fileName
-        self.IMPORT_FOLDER = importFolder
+from pathlib import Path
 
-    def getSoup(self, fileName=None, importFolder=None):
-        target_file = fileName or self.fileName
-        target_folder = importFolder or self.IMPORT_FOLDER
+class HTMLReader:
+    def __init__(self, import_folder='Input/'):
+        self.import_folder = Path(import_folder)
+        
+    def get_soup(self, file_name):
+        
+        path_name = self.import_folder / file_name
+
+        with open(path_name, 'r', encoding='utf-8') as html_file:
+            return BeautifulSoup(html_file, 'lxml')
